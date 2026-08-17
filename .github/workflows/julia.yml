@@ -1,0 +1,18 @@
+name: Julia CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: '1.10'
+      - name: Instantiate project
+        run: julia --project=. -e 'using Pkg; Pkg.instantiate()'
+      - name: Load source
+        run: julia --project=. -e 'include("src/Publication_Grade_Statistics.jl"); using .PublicationGradeStatistics'

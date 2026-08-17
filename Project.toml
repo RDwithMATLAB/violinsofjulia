@@ -1,0 +1,7 @@
+name = "PublicationGradeStatistics"
+uuid = "8d4e3a2b-4e3a-4f52-9e34-6c8b7f1d2a90"
+authors = ["RDwithMATLAB"]
+version = "0.1.0"
+
+[compat]
+julia = "1.9"

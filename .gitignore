@@ -1,0 +1,28 @@
+# Data
+*.csv
+*.xlsx
+*.xls
+
+# Generated outputs
+*_stats.xlsx
+*_plot.svg
+*_plot.png
+*_plot.pdf
+
+# Julia artifacts
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+.julia/
+Manifest.toml
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
