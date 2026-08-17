@@ -33,7 +33,6 @@ It combines a predefined statistical decision tree with publication-oriented vis
 - [Reproducibility](#reproducibility)
 - [Statistical Assumptions](#statistical-assumptions)
 - [Important Limitations](#important-limitations)
-- [GitHub Deployment](#github-deployment)
 - [Citation and Reporting](#citation-and-reporting)
 - [License](#license)
 
@@ -1052,73 +1051,7 @@ The script accepts `.xlsx` and `.xls` extensions, but modern `.xlsx` files are g
 
 ---
 
-# GitHub Deployment
 
-The repository is:
-
-```text
-https://github.com/RDwithMATLAB/violinsofjulia
-```
-
-The included deployment script is:
-
-```text
-deploy_to_github.ps1
-```
-
-Run it from the repository directory:
-
-```powershell
-.\deploy_to_github.ps1
-```
-
-The script:
-
-1. verifies that Git is installed;
-2. initializes Git if necessary;
-3. switches to `main`;
-4. stages the repository;
-5. creates a commit when there are staged changes;
-6. creates or updates the `origin` remote;
-7. pushes `main` to GitHub.
-
-The configured default remote is:
-
-```text
-https://github.com/RDwithMATLAB/violinsofjulia.git
-```
-
-## If `origin` does not exist
-
-The deployment script explicitly checks for an existing `origin` before trying to read its URL.
-
-If it does not exist, it runs:
-
-```powershell
-git remote add origin https://github.com/RDwithMATLAB/violinsofjulia.git
-```
-
-This avoids the common:
-
-```text
-error: No such remote 'origin'
-```
-
-failure.
-
-## Force push
-
-The script defaults to a normal push.
-
-Only use:
-
-```powershell
-.\deploy_to_github.ps1 -Force
-```
-
-when you intentionally need a force-with-lease push.
-
----
 
 # Citation and Reporting
 
